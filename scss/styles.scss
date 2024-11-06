@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+
+  form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+
+      legend {
+        font-weight: 700;
+      }
+
+      label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        input {
+          flex: 1;
+          padding: .25rem;
+        }
+      }
+
+      &.form__btns {
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+
+        button {
+          flex: 1;
+          padding: .25rem;
+        }
+      }
+    }
+  }
+}
